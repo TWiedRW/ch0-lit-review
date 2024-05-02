@@ -1,0 +1,62 @@
+---
+title: "Literature Review"
+format: html
+editor: 
+  markdown: 
+    wrap: sentence
+---
+
+# Outline
+
+-   Motivation
+-   Overview of graphs
+-   Perception of graphs
+    -   What makes a good graph
+    -   Chart junk
+    -   Decision times?
+    -   Cleveland and McGill
+-   2d vs. 3d
+    -   Advances in computer graphics
+    -   Bar graphs
+    -   Heat maps
+
+# Motivation
+
+# Overview of graphs
+
+# Perception of graphs
+
+-   Cleveland and McGill
+-   Heer and Bostock
+-   VanderPlas
+
+# 2D and 3D graphs
+
+```{=html}
+<!---
+This paragraph stems from general Google/Wikipedia research and my current impressions. Will need to find sources to cite!
+--->
+```
+Following the invention of the digital computer in the 1960s, advances in computer graphics allowed for greater control and accessibility for creating data visualizations.
+While many graphs first stem from artistic choices, the effectiveness of these graphs may not necessarily be tested before gaining widespread accessibility.
+For example, Excel 3 introduced its 3D bar chart feature in 1990, but studies around this time tend to suggest that the 2D bar chart ...
+<!-- Briefly mention Barfield / Fischer? -->
+
+A reasonable place to start comparing 2D and 3D graphs is with the bar chart.
+This simple graph style helped @cleveland1984 in establishing the ordering of EPTs and can be easily extended into a 3D bar chart for direct comparisons.
+While @cleveland1984 evaluated the EPTs of position along a common scale, length, and angle, they theorized that the accuracy of area would be higher than the accuracy of volume.\
+Depending on the context of information retrieval from a graph, especially with A \> B comparisons, the construction of 2D and 3D bar charts are simply special cases of area and volume comparisons; 2D and 3D bar charts have varying heights based on a data value, along with fixed widths and, in the case of 3D graphs, fixed depths.
+
+The theory theory that the EPT of area ranks higher than volume has been confirmed in several studies on 2D and 3D bar charts.
+<!-- Barfield / Fischer / Zacks / Hughes -->
+
+In the case of bar graphs, studies have shown that there is not a preference to even use 3D bar charts.
+<!--Barfield / Fischer -->
+
+Extending beyond the the bar graph, it makes sense to effectively use the third dimension for conveying information.
+<!-- Grinstein / Haarman-->
+
+The construction of 3D graphs perhaps requires even more scrutiny, especially when considering rendering options and interactivity.
+<!-- Tarr / Norman? / Rodger / Wang-->
+
+Paragraph about current use of true 3D visualizations?
