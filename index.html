@@ -20,7 +20,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="index_files/libs/clipboard/clipboard.min.js"></script>
@@ -87,14 +107,28 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="overview-of-graphs" class="level1">
 <h1>Overview of graphs</h1>
+<ul>
+<li><p>Design + purpose</p></li>
+<li><p>Gestalt principles?</p></li>
+</ul>
 </section>
 <section id="perception-of-graphs" class="level1">
 <h1>Perception of graphs</h1>
 <ul>
 <li>Cleveland and McGill</li>
 <li>Heer and Bostock</li>
-<li>VanderPlas</li>
+<li>VanderPlas (FOCUS ON THIS ONE AND ITS REFERENCES)</li>
 </ul>
+<p><u>Pre-attentive features</u></p>
+<ul>
+<li>Enns (1990) looks like a good reference here, but it’s not easy to find</li>
+</ul>
+<p>A good data visualization uses many design facets to promote fast interpretations and pattern recognition. The most immediate of these facets are called preattentive features, which are components that are identifiable in 500ms or less (cite?). These include, but are not limited to, the features of length, size, color, 3D depth cues, and lighting direction (See Healey Fig 3 for features and references). (Summarize one-two studies on preattentive features, Healey and Enns are good choices). Furthermore, even the orientation of a graph can influence the amount of time when making “A &gt; B” comparisons <span class="citation" data-cites="fischer2005">(<a href="#ref-fischer2005" role="doc-biblioref">Fischer, Dewulf, and Hill 2005</a>)</span>, where vertical bar graphs had faster decision times than horizontal bar graphs (I don’t like this phrasing, polish out). With many options for constructing visual stimuli, it is evident that design choices matter.</p>
+<p><u>EPTs and accuracy</u></p>
+<p>Another key aspect in creating a good data visualization is leveraging appropriate graph types through the use of comparison stimuli called Elementary Perceptual Tasks (EPTs). These EPTs were first introduced by <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#ref-cleveland1984" role="doc-biblioref">1984</a>)</span> as a theoretical framework for ranking methods of graphical representations of data when tasked with numerically estimating the difference of two values; these graphical representations include, but not limited to, the following EPTs: positional along a common scale, length, and angle. What <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#ref-cleveland1984" role="doc-biblioref">1984</a>)</span> found is that the type of graph can influence the accuracy in numerical comparisons. The findings by Cleveland and McGill were replicated by <span class="citation" data-cites="heer2010">Heer and Bostock (<a href="#ref-heer2010" role="doc-biblioref">2010</a>)</span> using Amazon Mechanical Turk, demonstrating the importance of graph type across different populations. (Additional papers on EPTs)</p>
+<p><u>Chart-junk + other factors</u></p>
+<p>Even when a data visualization makes use of optimal data features, other factors, such as grid lines and artistic clutter, can negatively affect the readability of graphs. (tufte)</p>
+<p><u>Importance of Graph Designs (summary of everything above)??</u></p>
 </section>
 <section id="d-and-3d-graphs" class="level1">
 <h1>2D and 3D graphs</h1>
@@ -102,16 +136,27 @@ ul.task-list li input[type="checkbox"] {
 This paragraph stems from general Google/Wikipedia research and my current impressions. Will need to find sources to cite!
 --->
 <p>Following the invention of the digital computer in the 1960s, advances in computer graphics allowed for greater control and accessibility for creating data visualizations. While many graphs first stem from artistic choices, the effectiveness of these graphs may not necessarily be tested before gaining widespread accessibility. For example, Excel 3 introduced its 3D bar chart feature in 1990, but studies around this time tend to suggest that the 2D bar chart … <!-- Briefly mention Barfield / Fischer? --></p>
-<p>A reasonable place to start comparing 2D and 3D graphs is with the bar chart. This simple graph style helped <span class="citation" data-cites="cleveland1984">@cleveland1984</span> in establishing the ordering of EPTs and can be easily extended into a 3D bar chart for direct comparisons. While <span class="citation" data-cites="cleveland1984">@cleveland1984</span> evaluated the EPTs of position along a common scale, length, and angle, they theorized that the accuracy of area would be higher than the accuracy of volume.<br>
-Depending on the context of information retrieval from a graph, especially with A &gt; B comparisons, the construction of 2D and 3D bar charts are simply special cases of area and volume comparisons; 2D and 3D bar charts have varying heights based on a data value, along with fixed widths and, in the case of 3D graphs, fixed depths.</p>
-<p>The theory theory that the EPT of area ranks higher than volume has been confirmed in several studies on 2D and 3D bar charts. <!-- Barfield / Fischer / Zacks / Hughes --></p>
+<p>A reasonable place to start comparing 2D and 3D graphs is with the bar chart. This simple graph style helped <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#ref-cleveland1984" role="doc-biblioref">1984</a>)</span> in establishing the ordering of EPTs and can be easily extended into a 3D bar chart for direct comparisons. While <span class="citation" data-cites="cleveland1984">Cleveland and McGill (<a href="#ref-cleveland1984" role="doc-biblioref">1984</a>)</span> evaluated the EPTs of position along a common scale, length, and angle, they theorized that the accuracy of area would be higher than the accuracy of volume. Depending on the context of information retrieval from a graph, especially with A &gt; B comparisons, the construction of 2D and 3D bar charts are simply special cases of area and volume comparisons; 2D and 3D bar charts have varying heights based on a data value, along with fixed widths and, in the case of 3D graphs, fixed depths. This would suggest that the use of 2D graphs should, in theory, be better than 3D graphs.</p>
+<p>The theory theory that the EPT of area ranks higher than volume has been confirmed in several studies on 2D and 3D bar charts.</p>
+<!-- Barfield / Fischer / Zacks / Hughes -->
 <p>In the case of bar graphs, studies have shown that there is not a preference to even use 3D bar charts. <!--Barfield / Fischer --></p>
 <p>Extending beyond the the bar graph, it makes sense to effectively use the third dimension for conveying information. <!-- Grinstein / Haarman--></p>
 <p>The construction of 3D graphs perhaps requires even more scrutiny, especially when considering rendering options and interactivity. <!-- Tarr / Norman? / Rodger / Wang--></p>
 <p>Paragraph about current use of true 3D visualizations?</p>
+
 </section>
 
-</main>
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-cleveland1984" class="csl-entry" role="listitem">
+Cleveland, William S., and Robert McGill. 1984. <span>“Graphical Perception: Theory, Experimentation, and Application to the Development of Graphical Methods.”</span> <em>Journal of the American Statistical Association</em> 79 (387): 531–54. <a href="https://doi.org/10.1080/01621459.1984.10478080">https://doi.org/10.1080/01621459.1984.10478080</a>.
+</div>
+<div id="ref-fischer2005" class="csl-entry" role="listitem">
+Fischer, Martin H., Nele Dewulf, and Robin L. Hill. 2005. <span>“Designing Bar Graphs: Orientation Matters.”</span> <em>Applied Cognitive Psychology</em> 19 (7): 953–62. <a href="https://doi.org/10.1002/acp.1105">https://doi.org/10.1002/acp.1105</a>.
+</div>
+<div id="ref-heer2010" class="csl-entry" role="listitem">
+Heer, Jeffrey, and Michael Bostock. 2010. <span>“CHI ’10: CHI Conference on Human Factors in Computing Systems.”</span> In, 203–12. Atlanta Georgia USA: ACM. <a href="https://doi.org/10.1145/1753326.1753357">https://doi.org/10.1145/1753326.1753357</a>.
+</div>
+</div></section></div></main>
 <!-- /main column -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {

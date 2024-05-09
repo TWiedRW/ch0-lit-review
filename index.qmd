@@ -4,6 +4,7 @@ format: html
 editor: 
   markdown: 
     wrap: sentence
+bibliography: references.bib
 ---
 
 # Outline
@@ -24,11 +25,41 @@ editor:
 
 # Overview of graphs
 
+-   Design + purpose
+
+-   Gestalt principles?
+
 # Perception of graphs
 
 -   Cleveland and McGill
 -   Heer and Bostock
--   VanderPlas
+-   VanderPlas (FOCUS ON THIS ONE AND ITS REFERENCES)
+
+[Pre-attentive features]{.underline}
+
+-   Enns (1990) looks like a good reference here, but it's not easy to find
+
+A good data visualization uses many design facets to promote fast interpretations and pattern recognition.
+The most immediate of these facets are called preattentive features, which are components that are identifiable in 500ms or less (cite?).
+These include, but are not limited to, the features of length, size, color, 3D depth cues, and lighting direction (See Healey Fig 3 for features and references).
+(Summarize one-two studies on preattentive features, Healey and Enns are good choices).
+Furthermore, even the orientation of a graph can influence the amount of time when making "A \> B" comparisons [@fischer2005], where vertical bar graphs had faster decision times than horizontal bar graphs (I don't like this phrasing, polish out).
+With many options for constructing visual stimuli, it is evident that design choices matter.
+
+[EPTs and accuracy]{.underline}
+
+Another key aspect in creating a good data visualization is leveraging appropriate graph types through the use of comparison stimuli called Elementary Perceptual Tasks (EPTs).
+These EPTs were first introduced by @cleveland1984 as a theoretical framework for ranking methods of graphical representations of data when tasked with numerically estimating the difference of two values; these graphical representations include, but not limited to, the following EPTs: positional along a common scale, length, and angle.
+What @cleveland1984 found is that the type of graph can influence the accuracy in numerical comparisons.
+The findings by Cleveland and McGill were replicated by @heer2010 using Amazon Mechanical Turk, demonstrating the importance of graph type across different populations.
+(Additional papers on EPTs)
+
+[Chart-junk + other factors]{.underline}
+
+Even when a data visualization makes use of optimal data features, other factors, such as grid lines and artistic clutter, can negatively affect the readability of graphs.
+(tufte)
+
+[Importance of Graph Designs (summary of everything above)??]{.underline}
 
 # 2D and 3D graphs
 
@@ -44,10 +75,12 @@ For example, Excel 3 introduced its 3D bar chart feature in 1990, but studies ar
 
 A reasonable place to start comparing 2D and 3D graphs is with the bar chart.
 This simple graph style helped @cleveland1984 in establishing the ordering of EPTs and can be easily extended into a 3D bar chart for direct comparisons.
-While @cleveland1984 evaluated the EPTs of position along a common scale, length, and angle, they theorized that the accuracy of area would be higher than the accuracy of volume.\
+While @cleveland1984 evaluated the EPTs of position along a common scale, length, and angle, they theorized that the accuracy of area would be higher than the accuracy of volume.
 Depending on the context of information retrieval from a graph, especially with A \> B comparisons, the construction of 2D and 3D bar charts are simply special cases of area and volume comparisons; 2D and 3D bar charts have varying heights based on a data value, along with fixed widths and, in the case of 3D graphs, fixed depths.
+This would suggest that the use of 2D graphs should, in theory, be better than 3D graphs.
 
 The theory theory that the EPT of area ranks higher than volume has been confirmed in several studies on 2D and 3D bar charts.
+
 <!-- Barfield / Fischer / Zacks / Hughes -->
 
 In the case of bar graphs, studies have shown that there is not a preference to even use 3D bar charts.
@@ -60,3 +93,4 @@ The construction of 3D graphs perhaps requires even more scrutiny, especially wh
 <!-- Tarr / Norman? / Rodger / Wang-->
 
 Paragraph about current use of true 3D visualizations?
+
