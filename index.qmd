@@ -29,6 +29,17 @@ bibliography: references.bib
 
 -   Gestalt principles?
 
+Data visualizations offer a quick method to summarize any amount of information.
+The visual summary offers improved decision times [@brewer2012], pattern recognition, and increased recollection (source).
+(Expand on sources, I know I've seen these papers, Dickson et al (1986 is mentioned in Barfield, check this out).
+Clearly, data visualizations have proven beneficial over the years and merit further expansion.
+
+Perhaps the greatest advantage of data visualizations is to help see what information is contained within data.
+For example, Anscombe's Quartet (source) contains four bivariate data sets that all have, within small rounding errors, identical descriptive statistics (figure).
+While the trends of the data sets are apparent when graphed, they would be missed using the descriptive statistics and possibly in numeric format.
+
+In the case of multivariate data, heat maps are a common method to show trends in a row-column format, utilizing color shading to display values [@wilkinson2009].
+
 # Perception of graphs
 
 -   Cleveland and McGill
@@ -61,6 +72,8 @@ Even when a data visualization makes use of optimal data features, other factors
 
 [Importance of Graph Designs (summary of everything above)??]{.underline}
 
+In summary, the design of
+
 # 2D and 3D graphs
 
 ```{=html}
@@ -79,18 +92,22 @@ While @cleveland1984 evaluated the EPTs of position along a common scale, length
 Depending on the context of information retrieval from a graph, especially with A \> B comparisons, the construction of 2D and 3D bar charts are simply special cases of area and volume comparisons; 2D and 3D bar charts have varying heights based on a data value, along with fixed widths and, in the case of 3D graphs, fixed depths.
 This would suggest that the use of 2D graphs should, in theory, be better than 3D graphs.
 
-The theory theory that the EPT of area ranks higher than volume has been confirmed in several studies on 2D and 3D bar charts.
-
+The theory theory that the EPT of area ranks higher than volume has been evaluated in several studies on 2D and 3D bar charts.
+@barfield1989 showed that accuracy between 2D and 3D charts depended on managerial experience level, with less experienced managers having higher accuracy for 2D graphs.
+@zacks evaluated the effect of 3D depth cues and found that accuracy decreased for 3D graphs, but the difference in accuracy between 2D and 3D graphs was less when a delay in responses was introduced.
+@hughes looked at just noticeable differences in 2D and 3D bar charts, which showed that the noticeable difference was larger for 3D graphs.
+Taken together, it is reasonable to suggest that 2D graphs have advantages over 3D graphs.
 <!-- Barfield / Fischer / Zacks / Hughes -->
 
-In the case of bar graphs, studies have shown that there is not a preference to even use 3D bar charts.
+In the case of bar graphs, studies have shown that there may not be a preference to use 3D bar charts.
 <!--Barfield / Fischer -->
 
 Extending beyond the the bar graph, it makes sense to effectively use the third dimension for conveying information.
+@grinstein2001 discusses several methods to convey higher dimensional data, including 3D scatter plots and height maps.
+
 <!-- Grinstein / Haarman-->
 
 The construction of 3D graphs perhaps requires even more scrutiny, especially when considering rendering options and interactivity.
 <!-- Tarr / Norman? / Rodger / Wang-->
 
 Paragraph about current use of true 3D visualizations?
-
