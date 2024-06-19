@@ -1,0 +1,162 @@
+---
+format: html
+---
+
+```{r}
+#| include: false
+
+library(tidyverse)
+```
+
+
+- Introduction for the themes and important stuff
+- Literature review is for expanding on the details
+
+**TELL A STORY**
+
+# Literature Review 
+
+## Introduction
+
+An essential method in any form of data analysis is to visualize information. 
+Whether this is for exploring a data set or graphing statistical results, the output visualizations provide a deeper understanding of the underlying mechanisms. 
+For example, Anscombe's Quartet contains four bivariate data sets that all have, within small rounding errors, identical descriptive statistics (doi:10.2307/2682899). 
+While the trends of the data sets are apparent when graphed, they would be missed using the descriptive statistics (@fig-anscombe).
+Furthermore, using data visualizations can help improve recognition of trends and recollection of information (sources). **OTHER REFERENCES TO EXPAND: KOSSLYN, MEYER, BREWER, PRASAD**
+
+
+```{r}
+#| label: fig-anscombe
+#| fig-cap: "This is where I will put the descriptive statistics."
+anscombe.clean <- anscombe %>% 
+  pivot_longer(1:8) %>% 
+  separate(name, into = c('null', 'coord', 'set'), sep = '') %>% 
+  select(-null) %>% 
+  pivot_wider(names_from = coord, values_fn = list) %>% 
+  unnest(c(x,y))
+
+anscombe.clean %>% 
+  ggplot(mapping = aes(x = x, y = y)) + 
+  geom_point() + 
+  geom_smooth(method = 'lm', se = F) +
+  facet_wrap(~set, nrow = 1) + 
+  theme_bw() + 
+  theme(aspect.ratio = 1)
+```
+
+While many types of graphs exist, their existence does not imply that they are useful or even necessarily the best. 
+Formal statistical testing of the effectiveness of graphs began around 40 years ago and has since provided guidelines for the construction of good data visualizations.
+The first of these tests were done by Cleveland and McGill, where they focused on a concept referred to as *Elementary Perceptual Tasks (EPTs)*.
+EPTs, as defined by Cleveland and McGill, are the action of extracting quantitative information from graphs, including position along a common scale, position along non-aligned scales, length, direction, angle, area, volume, curvature, and shading. 
+What they found when testing three of the EPTs is that conveying numeric information varied depending on how the data was presented, showing that graph types matter extracting information.
+Further studies have replicated and expanded on the theory of EPTs and their role in producing better graphs (Heer, other papers).
+
+
+## Data Visualization in Three Dimensions
+
+There are many standard ways for handling univariate and bivariate data, but multivariate data becomes increasingly complex to visualize (Grinstein). 
+One method to visualize additional variables is to introduce color, shape, or size to convey a variable. 
+However, these methods tend to rank lower using the EPT theory for conveying quantitative information.
+Another potential solution is to use facets to create separate graphs by one or more variables, but the number of graphs can become cumbersome rather quickly. 
+An example for each of these methods is in @fig-ept-examp.
+
+```{r}
+#| label: fig-ept-examp
+#| layout-nrow: 2
+#| fig-cap: "Three examples of the same data using different Elementary Perceptural Tasks to visualize three quantitative variables. The variables are generically named x, y, and z."
+#| fig-subcap: 
+#|  - "Graph using color to convey the value of z."
+#|  - "Graph using size to convey the value of z."
+#|  - "Graph using facets to convey groupings of z."
+set.seed(5)
+n = 100
+x = runif(n, 0, 100); y = runif(n, 0, 100)
+z = rnorm(n, 50, 20); z[z<0|z>100] <- 50
+
+ept.examp <- cbind(x,y,z)
+
+ept.examp %>% 
+ggplot(mapping = aes(x = x, y = y, color = z)) + 
+  geom_point() + 
+  theme_bw() +
+  theme(legend.position = 'top', aspect.ratio = 1)
+
+ept.examp %>% 
+ggplot(mapping = aes(x = x, y = y, size = z)) + 
+  geom_point() + 
+  theme_bw() +
+  theme(legend.position = 'top', aspect.ratio = 1)
+
+ept.examp %>% 
+ggplot(mapping = aes(x = x, y = y)) + 
+  geom_point() + 
+  theme_bw() +
+  theme(legend.position = 'top', aspect.ratio = 1/2) + 
+  facet_wrap(~cut(z, breaks = 10*(0:10)))
+
+#Code to produce a 3d scatter plot of the data, not showing up in document rn so probably need to 
+library(rgl)
+plot3d(ept.examp)
+view3d(theta = 25, phi = 20, zoom = 0.9)
+
+```
+
+In the case of three variables, it is natural to extend graphs into the native dimension of the data. 
+Three variables can each occupy a separate axis to uniquely identify a position in space.
+The extra dimension is not without its additional challenges; perceiving information in three-dimensional space has further considerations, including viewing angle (Enns), shading of surfaces (Zacks), depth cues (Zacks, Fischer), and interactivity (Wang).
+
+The current mantra is to avoid 3D graphs when possible (Many blog articles?).
+This is somewhat justified in research directly comparing 2D and 3D graphs, although results are sometimes contradictory to the claim (Barfield (accuracy+confidence), Hughes (JND), Fisher (use), Zacks (depth cues)). 
+One interesting facet is that 3D graphs are not preferred when a suitable 2D alternative exists (fisher, at least one other too mentioned this). 
+
+One major limitation of studies surrounding 3D data visualizations is that they focus on 2D projections of the three dimensional space. 
+Granted, technology has advanced where it is now easier to truly represent 3D visualization spaces via 3D printing (Oswald) or virtual/augmented reality (Kraus). 
+
+
+
+
+
+
+
+
+
+<!-- Some examples of 2d plots, probably won't use table
+```{r}
+tribble(
+  ~'Data', ~'Data Type', ~'Possible graphs',
+  'Univariate', 'Categorical', 'Bar chart, pie chart',
+  'Univariate', 'Numerical', 'Density chart, histogram',
+  'Bivariate', 'Both categorical', 'Mosaic plot',
+  'Bivariate', 'One categorical and one numerical', 'Box plot, bar chart',
+  'Bivariate', 'Both numerical', 'Scatter plot, contour plot'
+)
+```
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

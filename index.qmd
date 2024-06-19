@@ -31,12 +31,12 @@ bibliography: references.bib
 
 Data visualizations offer a quick method to summarize any amount of information.
 The visual summary offers improved decision times [@brewer2012], pattern recognition, and increased recollection (source).
-(Expand on sources, I know I've seen these papers, Dickson et al (1986 is mentioned in Barfield, check this out).
+(Expand on sources, I know I've seen these papers, Dickson et al (1986) is mentioned in Barfield, check this out).
 Clearly, data visualizations have proven beneficial over the years and merit further expansion.
 
 Perhaps the greatest advantage of data visualizations is to help see what information is contained within data.
 For example, Anscombe's Quartet (source) contains four bivariate data sets that all have, within small rounding errors, identical descriptive statistics (figure).
-While the trends of the data sets are apparent when graphed, they would be missed using the descriptive statistics and possibly in numeric format.
+While the trends of the data sets are apparent when graphed, they would be missed using the descriptive statistics and possibly when viewed in a tabular format.
 
 In the case of multivariate data, heat maps are a common method to show trends in a row-column format, utilizing color shading to display values [@wilkinson2009].
 
@@ -47,8 +47,6 @@ In the case of multivariate data, heat maps are a common method to show trends i
 -   VanderPlas (FOCUS ON THIS ONE AND ITS REFERENCES)
 
 [Pre-attentive features]{.underline}
-
--   Enns (1990) looks like a good reference here, but it's not easy to find
 
 A good data visualization uses many design facets to promote fast interpretations and pattern recognition.
 The most immediate of these facets are called preattentive features, which are components that are identifiable in 500ms or less (cite?).
@@ -111,3 +109,45 @@ The construction of 3D graphs perhaps requires even more scrutiny, especially wh
 <!-- Tarr / Norman? / Rodger / Wang-->
 
 Paragraph about current use of true 3D visualizations?
+
+Notes from Susan
+
+-   Include figures
+
+-   "Ans-a-dome"
+
+-   No motivation or multivariate data
+
+-   Connect and synthesize
+
+    -   Post it notes with paper summarizes
+
+-   Goal: this is the blank spot; make the story of the discipline
+
+    -   Visualization and what we know about it, make a story of it
+
+-   Obsidian is a possible way (possible graphics group presentation) (check the subreddit)
+
+-   Zotero integration with Obsidian
+
+Break down the walls
+
+-   Experiment will continue through the summer
+
+    -   Ask Amanda about adding questions to evaluations
+
+    -   Send email about missing kits
+
+Sci-hub plug-in is a good resource
+
+<https://libraries.unl.edu/library-account-logins>
+
+Schedule meeting for week of June 17th; weekly slack updates
+
+\- Triesman: feature integration theory - 10.1016/S0734-189X(85)80004-9, 10.1016/0010-0285(80)90005-5
+
+\- Healey: 10.1145/230562.230563
+
+Check with Amanda for Ta's, keep working on lit review / Susan, office hour schedule for students having access to experiment
+
+10ish hours a week
