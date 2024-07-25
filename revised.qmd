@@ -56,9 +56,10 @@ anscombe.clean %>%
 While many types of graphs exist, their existence does not imply that they are useful or even necessarily the best.
 Early formal statistical testing of the effectiveness of graphs began around 100 years ago with an emphasis on numerical accuracy [@croxton1927; @croxton1932; @eells1926].
 Recommendations from these studies suggested that graphs that produce better accuracy should be preferred over other types.
+<!-- There are a LOT of other things beyond accuracy that matter here... what are they? -->
 This practice continued as graphs were refined into their basic forms for evaluation.
 A cornerstone study by @cleveland1984 focused on a concept referred to as *Elementary Perceptual Tasks (EPTs)*.
-EPTs, as defined by Cleveland and McGill, are the action of extracting quantitative information from graphs, including position along a common scale, position along non-aligned scales, length, direction, angle, area, volume, curvature, and shading.
+EPTs, as defined by Cleveland and McGill (XXX CITE XXX), are the action of extracting quantitative information from graphs, including position along a common scale, position along non-aligned scales, length, direction, angle, area, volume, curvature, and shading.
 What they found when testing three of the EPTs is that conveying numeric information varied depending on how the data was presented, showing that graph types matter extracting information.
 Further studies have replicated and expanded on the theory of EPTs and their role in producing better graphs [@heer2010].
 
@@ -66,6 +67,7 @@ Further studies have replicated and expanded on the theory of EPTs and their rol
 
 There are many standard ways for handling univariate and bivariate data, but multivariate data becomes increasingly complex to visualize [@grinstein2001].
 One method to visualize additional variables is to introduce color, shape, or size to convey a variable.
+<!-- Show examples of each of color/shape/size -- note that shape isn't suitable for quanitative 3rd dimension, while color and size can be; size isn't really suitable for categorical data unless it's ordered. -->
 However, these methods tend to rank lower using the EPT theory for conveying quantitative information.
 Another potential solution is to use facets to create separate graphs by one or more variables, but the number of graphs can become cumbersome rather quickly.
 
@@ -120,12 +122,16 @@ view3d(theta = 25, phi = 20, zoom = 0.9)
 In the case of three variables, it is natural to extend graphs into the native dimension of the data.
 Three variables can each occupy a separate axis to uniquely identify a position in space.
 The extra dimension is not without its additional challenges; perceiving information in three-dimensional space has further considerations, including viewing angle [@enns1990], shading of surfaces [@zacks1998], depth cues [@zacks; @fischer2000], and interactivity [@wang2022].
+<!-- Ok, so there are additional challenges. You'll want to show what you mean (use pictures + words) for each of these, demonstrating *why* it is a challenge, using data.  -->
 
 The current mantra is to avoid 3D graphs when possible (Many blog articles?).
+<!-- Also Munzner, Schneiderman, Kosara, ... -->
 This is somewhat justified in research directly comparing 2D and 3D graphs, although results are sometimes contradictory to the claim (Barfield (accuracy+confidence), Hughes (JND), Fisher (use), Zacks (depth cues)).
 One interesting facet is that 3D graphs are not preferred when a suitable 2D alternative exists (fisher, at least one other too mentioned this).
+<!-- Elaborate on this - what choices did participants have, what measures were used in addition to preference? -->
 
 One major limitation of studies surrounding 3D data visualizations is that they focus on 2D projections of the three dimensional space.
+<!-- You will want to cite studies and specifically discuss/show example figures - e.g. C&M's study has really crappy 3D figures and they didn't even test them that well.  -->
 Granted, technology has advanced where it is now easier to truly represent 3D visualization spaces via 3D printing (Oswald) or virtual/augmented reality (Kraus).
 
 ````{=html}
@@ -142,3 +148,5 @@ tribble(
 ```
 -->
 ````
+
+
