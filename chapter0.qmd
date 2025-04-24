@@ -1,0 +1,143 @@
+---
+title: "Chapter 0"
+format: html
+author: Tyler Wiederich
+date: last-modified
+bibliography: references.bib
+---
+
+# Outline
+
+## 2d vs. 3d
+
+-   @croxton1932: Bars vs. circles vs. squares vs. cubes
+
+-   @barfield1989: managerial experience, computer experience, paper/computer, dimensionality
+
+-   @enns1990: 3d orientation and visual search
+
+-   @sun1996: Preattentive perception of 3D shapes
+
+-   @fisher1997: preference of 2d and 3d graphs
+
+-   @zacks1998: 2d vs. 3d depth cues on accuracy
+
+-   @fischer2000: 2d vs. 3d depth cues on comprehension
+
+-   @kraus2020: 2d vs. 3d heatmaps (VR and 2d screens)
+
+-   @herman2025: 3d printed vs. 2d digital vs. VR
+
+-   @hughes: just noticeable differences in 2d and 3d bar charts
+
+## Types of charts
+
+-   @eells1926: Bars vs. circles
+
+-   @croxton1927: Bars vs. circles
+
+-   @croxton1932: Bars vs. circles vs. squares vs. cubes
+
+-   @beniger1978: History of graphics
+
+-   @cleveland1984: Types of stimuli
+
+-   @costigan-eaves1986: Combining words, images, text, etc.
+
+-   @cleveland1987: Basic forms of graphics
+
+-   @kosslyn1989: Gestalt principles, basic graph design
+
+-   @meyer1997: tables vs. graphs (bar and line)
+
+-   @grinstein2001: high dimensional visualizations
+
+-   @fischer2005: orientation of bar graphs
+
+-   @stewart2009: 2d and 3d graphs with different color variations
+
+-   @wilkinson2009: history of heat map with clustering
+
+-   @heer2010: crowdsourcing and replicating @cleveland1984
+
+-   @brewer2012: tables vs. bar charts
+
+-   @prasad2012: text vs. table vs. graph
+
+-   @haarman2015: new heat map method
+
+-   @godau2016: bias in bar charts
+
+-   @klemm2016: 3d heatmap through 2d slices
+
+-   @besancon2017: spatial exploration of 3d
+
+-   @chun2017: redundant encoding and its effect on accuracy and speed
+
+-   @vanderplas2020: features of good graphs
+
+-   @slomska-przech2021: heatmaps, specifically with maps
+
+-   @the
+
+## Psychophysics
+
+-   @baird1978: Weber's laws and physical scaling
+
+-   @birnbaum1978: Subtraction and ratio theories for stimulus comparisons
+
+-   @hagerty1978: Scaling tasks
+
+-   @healey1996: method for accurate numerical estimation through preattentive processing
+
+-   @narens1996: magnitude estimations for ratios
+
+-   @sun1996: Preattentive perception of 3D shapes
+
+-   @ware2004: XXX
+
+-   @shapepe2013: shape perception (more about computer vision?)
+
+-   @dutilh2016: decision making in graphs
+
+-   @kingdom2016: psychophysics book, has constant stimuli in 3.4
+
+-   @finlayson2017: search along 2d grids
+
+-   @norman2017: ratios of distances
+
+-   @wolfe2019: preattentive features
+
+-   @park2021: ratio magnitude vs. simple magnitude
+
+-   @veit: ratio and subtraction comparisons
+
+## Other
+
+-   @rodger2000: Rendering parameters for 3d shapes
+
+-   @tarr2001: human perception sensitive to viewing parameters
+
+-   @silva2007: effect of color in visualization
+
+-   @breslow2009: effect of color scale
+
+-   @engel2013: color in 3d spaces (not heatmaps)
+
+-   @brath2014: uses of 3d visualizations
+
+-   @hu2015: 3d printed graphs
+
+-   @liu2018: effect of color scales on accuracy and time
+
+-   @oswald2019: 3d printing of geographical areas for education
+
+-   @reda2019: choosing color scales (red-blue, viridis, rainbow)
+
+-   @walkenbach2020: versions of Excel, including when 3d was introduced
+
+-   @wang2022: effect of input devices on 3d interaction
+
+-   @molinalopez2023: 2d heatmap colors (viridis vs. blues), with discrete and continuous scales
+
+-   @zhang2023: color sensitivity and just noticeable differences

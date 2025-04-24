@@ -1,0 +1,105 @@
+---
+title: "Chapter 0"
+subtitle: "Literature Review"
+format: html
+bibliography: references.bib
+bibliographystyle: apa
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+library(tidyverse)
+```
+
+The practice of visualizing data is a key component of understanding data structures and communicating results. These visualizations are created by mapping data summaries into a visual space [@wilkinson2005], which in turn help readers to better understand data than compared to tables [@dallenbach1963; @meyer1997; @brewer2012]. However, charts are not created equally and design considerations can help to improve numerical accuracy and comprehension [@croxton1932; @cleveland1984] (ALSO CITE COMPREHENSION PAPER). In this dissertation, I will discuss the construction and evaluation of the projection of data visualizations.
+
+(Probably will split this into a 2-3 paragraphs)
+
+## Design of Data Visualizations
+
+@wilkinson2005 proposed the Grammar of Graphics, a systematic pipeline that maps data into charts. This process consists of taking a data source and aggregating data before taking the form of a visualization. While @wilkinson2005 discusses a formulation of creating charts, a modified version is presented by @wickham2010 to accommodate the practical needs for the programming aspect of the popular `ggplot2` package. Many other software packages make use of a similar process to create visualizations (js, Python, etc.)
+
+![Chart about GoG]()
+
+```{mermaid}
+graph LR
+    A[Data] --> B(Variables)
+    B --> C(Algebra)
+    C --> D(Scales)
+    D --> E(Statistics)
+    E --> F(Geometry)
+    F --> G(Coordinates)
+    G --> H(Aesthetics)
+    H --> I[Render]
+```
+
+All data visualizations start with underlying data and its variables [@wilkinson2005, chap. 3-7; @wickham2010]. (Variables, Algebra, Scales, Statistics) The data, whether it be in one table or multiple tables, contains variables that record measurements. These variables can be combined with other variables in a singular table. The final dataset is created when all appropriate scale transformations and statistical summaries are performed.
+
+Once the data has been summarized, the visual components can be assigned [@wilkinson2005 chap. 8-10; @wickham2010]. (Geometry, Coordinates, Aesthetics, Render) Geometries are the first assignment, which denote how the data will be displayed. These geometries are placed into a coordinate system, which typically defaults to the Cartesian coordinate system. Aesthetics position the geometries onto the coordinate system and assign other attributes, such as colors and shapes. Lastly, the chart can be rendered to produce the visualization.
+
+ANOTHER PARAGRAPH HERE??
+
+## Chart Design Matters
+
+In the 20th and 21st centuries, there were many studies conducted to determine which features of data visualizations are able to effectively communicate information to readers [@croxton1932; @cleveland1984; @kosslyn1989; @heer2010]. In general, simpler graphical elements tend to perform better on chart comprehension. @cleveland1984 categorized these elements into *Elementary Perceptual Tasks*, which are methods that people use to extract quantitative information from charts. These methods include, but are not limited to, position along (non)-aligned scales, lengths, angles, areas, and volume.
+
+The studies conducted by @cleveland1984 provided a baseline for Elementary Perceptual Tasks, and their findings were replicated by @heer2010. @cleveland1984 conducted two experiments that asked participants to estimate the percentage of a smaller quantity to a larger quantity using graphics consisting of position, length, and angle comparisons. Their results showed that the method of presentation affects estimation of numerical quantities, and thus that the choice of presentation is important in the design of charts.
+
+-   Will need to syntheses, not just state what they did!
+
+PARAGRAPH ABOUT OTHER STUDIES TALKING ABOUT IMPORTANT CONSIDERATIONS, E.G., @vanderplas2017, Gestalt principles, etc. MAYBE PAPER VS. COMPUTER??
+
+PARAGRAPH ABOUT LINES VS BARS VS VOLUMN
+
+-   @croxton1932
+
+-   
+
+## Perception of 3D Objects
+
+As humans, we live and perceive a 3D world, where objects have measureable lengths, widths, and depths [@euclides2008; @martins2016]. This allows us to view objects and planes that are contained in 2D or 3D spaces (something about 1D not being detectable). Additionally, all objects that exist in our world have environmental factors, such as material, texture, and lighting. This creates a complex
+
+Human perception is a complex process, consisting of environmental and neurological factors [@johnson2018; @welchman2016].
+
+(How image enters eye)
+
+(Retina to brain/perception)
+
+(2d images to perception)
+
+(3d images to perception)
+
+Papers
+
+-   @martins2016
+
+-   @johnson2018
+
+-   @welchman2016
+
+-   @rother2009
+
+-   @kjelldahl1995
+
+-   @biilthoff
+
+-   @krauze2023
+
+## State of 2D vs. 3D graphics
+
+Early data visualizations made use of the same perceptual space that we use today. For example, the Turin Papryrus Map was created around 1150 BC by Amennakhte (CITE). This map was drawn within 2-dimensions on papyrus and displays a region of Wadi Hammamat along with notable locations and features within the region. Another example is the quipu, which was a record keeping device used prominently by the Inca Empire, with use dating back to 2600 BC (CITE). The quipu used colored fiber cords and knots to record numerical entries in a 3-dimensional space. Over time, the methods of visualizing data changed, but still exist in 2- and 3-dimensional spaces.
+
+(2D vs. 3D experiments)
+
+## Novel use of 3D graphics
+
+Section about how other people have used true 3D graphs (printing, VR)
+
+-   @herman2025
+
+-   @kraus2020
+
+-   
