@@ -36,7 +36,7 @@ graph LR
     H --> I[Render]
 ```
 
-All data visualizations start with underlying data and its variables [@wilkinson2005, chap. 3-7; @wickham2010]. (Variables, Algebra, Scales, Statistics) The data, whether it be in one table or multiple tables, contains variables that record measurements. These variables can be combined with other variables in a singular table. The final dataset is created when all appropriate scale transformations and statistical summaries are performed.
+All data visualizations start with underlying data and its variables [@wilkinson2005, chap. 3-7; @wickham2010]. <!--#(Variables, Algebra, Scales, Statistics)  --> The data, whether it be in one table or multiple tables, contains variables that record measurements. These variables can be combined with other variables in a singular table. The final dataset is created when all appropriate scale transformations and statistical summaries are performed.
 
 Once the data has been summarized, the visual components can be assigned [@wilkinson2005 chap. 8-10; @wickham2010]. (Geometry, Coordinates, Aesthetics, Render) Geometries are the first assignment, which denote how the data will be displayed. These geometries are placed into a coordinate system, which typically defaults to the Cartesian coordinate system. Aesthetics position the geometries onto the coordinate system and assign other attributes, such as colors and shapes. Lastly, the chart can be rendered to produce the visualization.
 
@@ -60,7 +60,7 @@ PARAGRAPH ABOUT LINES VS BARS VS VOLUMN
 
 ## Perception of 3D Objects
 
-As humans, we live and perceive a 3D world, where objects have measureable lengths, widths, and depths [@euclides2008; @martins2016]. This allows us to view objects and planes that are contained in 2D or 3D spaces (something about 1D not being detectable). Additionally, all objects that exist in our world have environmental factors, such as material, texture, and lighting. This creates a complex
+As humans, we live and perceive a 3D world, where objects have measurable lengths, widths, and depths [@euclides2008; @martins2016]. This allows us to view objects and planes that are contained in 2D or 3D spaces (something about 1D not being detectable). Additionally, all objects that exist in our world have environmental factors, such as material, texture, and lighting. This creates a complex relationship
 
 Human perception is a complex process, consisting of environmental and neurological factors [@johnson2018; @welchman2016].
 
