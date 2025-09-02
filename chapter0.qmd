@@ -12,43 +12,43 @@ bibliography: references.bib
 
 -   @croxton1932: Bars vs. circles vs. squares vs. cubes
 
-    - Bars more accurate than squares, circles, or cubes
-    - Squares and circles -> no difference
-    - Squares more accurate than cubes
-    - Circles more accurate than cubes
+    -   Bars more accurate than squares, circles, or cubes
+    -   Squares and circles -\> no difference
+    -   Squares more accurate than cubes
+    -   Circles more accurate than cubes
 
 -   @barfield1989: managerial experience, computer experience, paper/computer, dimensionality
 
-    - Faster solution times for computer than paper, but not for dimensionality
-    - Novice better with 2D paper; experienced more accurate with 3D computer
-    - More confident with 2D than 3D
+    -   Faster solution times for computer than paper, but not for dimensionality
+    -   Novice better with 2D paper; experienced more accurate with 3D computer
+    -   More confident with 2D than 3D
 
 -   @enns1990: 3d orientation and visual search
 
-    - Scene-based features are preattentive
+    -   Scene-based features are preattentive
 
 -   @sun1996: Preattentive perception of 3D shapes
 
 -   @fisher1997: preference of 2d and 3d graphs (where extra dimension not for information)
 
-    - Preference for 2D when extracting information
-    - 3D does not more accurately convey information. 2D had better responses, but not significant
+    -   Preference for 2D when extracting information
+    -   3D does not more accurately convey information. 2D had better responses, but not significant
 
 -   @zacks1998: 2d vs. 3d depth cues on accuracy (where extra dimension not for information)
 
-    - 3D lowered accuracy, but diminished with time delay
-    - Height of surrounding bar affected accuracy
-    - Shading not as bad
+    -   3D lowered accuracy, but diminished with time delay
+    -   Height of surrounding bar affected accuracy
+    -   Shading not as bad
 
 -   @fischer2000: 2d vs. 3d depth cues on comprehension
 
-    - Increased time with 3D
+    -   Increased time with 3D
 
 -   @kraus2020: 2d vs. 3d heatmaps (VR and 2d screens)
 
-    - Lower errors with screen and VR than for 3D; no difference in completion time
-    - Better error rate with 3D for finding two values of equal size over 2D
-    - 3D has better error rates for tasks, but required more time
+    -   Lower errors with screen and VR than for 3D; no difference in completion time
+    -   Better error rate with 3D for finding two values of equal size over 2D
+    -   3D has better error rates for tasks, but required more time
 
 -   @herman2025: 3d printed vs. 2d digital vs. VR
 
