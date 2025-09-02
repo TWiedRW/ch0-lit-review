@@ -67,9 +67,11 @@ The seminal work of @cleveland1984 theorized that encoding information in volume
 
 If empirical studies have shown that the use of depth cues on bar charts does not provide added benefits, then why are 3D bar charts used?
 
-@levy1996 made an argument for the use of depth cues in certain situations. In a series of three experiments, @levy1996 tasked over 100 psychology students at Stanford with selecting one of various 2D and 3D charts that they thought would be best for certain scenarios. What they found was that students tended to pick 3D charts over 2D charts when needing to increase memory recollection of the chart, and about equal preference for 2D and 3D charts when presenting the information to others. @levy1996 theorized that the depth embellishments in the graphic may increase memorability of the chart by making the chart stand out.
+@levy1996 made an argument for the use of depth cues in certain situations. In a series of three experiments, @levy1996 tasked over 100 psychology students at Stanford with selecting one of various 2D and 3D charts that they thought would be best for certain scenarios. What they found was that students tended to pick 3D charts over 2D charts when needing to increase memory recollection of the chart, and about equal preference for 2D and 3D charts when presenting the information to others. @levy1996 theorized that the depth embellishments in the graphic may increase memorability of the chart by making the chart stand out. Several other studies have shown that other types of "chart junk" can increase recollection, but at the cost of participants needing longer times to process the charts [@bateman2010; @borgo2012; @peña2020].
 
-Several other studies have shown that other types of "chart junk" can increase recollection, but at the cost of participants needing longer times to process the charts [@bateman2010; @borgo2012; @peña2020]. The increase of time for reading 3D bar charts was noted by @fischer2000, lending some credibility
+The increase of time for reading 3D bar charts was noted by @fischer2000, lending some credibility
+
+Preference for memorability. Noted with other chart junk.
 
 ## Conflicting Empirical Studies
 
@@ -79,25 +81,33 @@ When accuracy is the goal, 2D is not better than 3D in some cases
 -   @melodycarswell1991, should include this one!
 -   @spence1990
 
-Although @tufte2001 argued against the use of 3D charts when possible, studies involving direct comparisons of 2D and 3D bar charts have not provided conclusive evidence that depth cues should be avoided at all costs. .....
+Although @tufte2001 argued against the use of 3D charts when possible, studies involving direct comparisons of 2D and 3D bar charts have shown mixed results. In general, these studies focus on metrics of accuracy and find that 3D bar charts tend to be less accurate. Another common metric is response time, where 3D charts tend to have longer response times....
 
 ### Accuracy
 
-Accuracy is a common metric in studies comparing 2D and 3D bar charts. When only measuring accuracy, 3D charts tend to be less accurate than their 2D counterparts [@zacks1998; @stewart2009].
+Accuracy is a common metric in studies comparing 2D and 3D bar charts, typically measured by either extracting a single numeric estimate or making comparisons between two values. Many studies used controlled environments for constructing stimuli, often using one or two stimuli at a time. In practice, charts are often more complex, displaying many stimuli without drawing attention to particular values.
 
-![Figure in Statistical Graphics: Design Principles and Practices. The viewing angle for this chart would have viewers overestimate the values of the ](images/skewed-angle.jpg){width="3.35in"}
+When only measuring accuracy, 3D bar charts tend to be less accurate than their 2D counterparts [@zacks1998; @stewart2009]. However, this result is less prominent when introducing time delays [@zacks1998, Experiment 2] or easier task complexity [@stewart2009]. @siegrist1996 noted that bar positions and sizes affected performance accuracy, emphasizing that other factors contribute to accuracy. It is also important to note that metrics of accuracy are not conclusive, where sometimes there is no evidence of a difference between 2D and 3D bar charts [@melodycarswell1991].
 
-@zacks1998 found that 3D depth cues tended to lower accuracy of judgements, but only when the stimuli was present when making judgements. @zacks1998 also noted that
+Of course, there are other less-studied factors that could affect perceptual judgments of accuracy in 3D bar charts. In addition to viewing parameters found in 2D bar chart studies [@fischer2005; @rice2024], adding depth cues are also subject to viewing angles, amount of depth, and field of view parameters. Viewing angle, with respect to the axis, can mislead the reader into overestimating or underestimating numerical quantities (FIGURE X). @zacks1998 did not find a significant effect for the amount of perception depth, but noted a trend such that increased exaggeration of depth lowered their accuracy metric. Lastly, field of view is fixed for the viewer, but can widely distort 3D renderings.
 
--   @siegrist1996, 2D and 3D not that different, but bar positions is important! Also more time needed too
+![Figure in Statistical Graphics: Design Principles and Practices. The viewing angle for this chart would have viewers overestimate the values of the bars](images/skewed-angle.jpg){width="3.35in"}
+
+![Placeholder image for fov comparions](images/fov-placeholder.png){width="6in"}
 
 ### Response Times
 
+The speed in making perceptual judgments is another common metric in studies comparing types of charts.
+
 -   @stewart2009
+-   @siegrist1996
+-   @fischer2000
 
 ### Preference
 
 -   @levy1996
+-   @stewart2009
+-   @fisher1997
 
 @zacks1998
 
@@ -111,9 +121,9 @@ Accuracy is a common metric in studies comparing 2D and 3D bar charts. When only
 
 -   Experiment 5: Same as 3,4, but included new plot type that made bars by overlapping all volume faces
 
-**PHYSICAL 3D CHARTS**
+## Construction of 3D Bar Charts
 
-All of the aforementioned studies have one key limitation: they are conducted in environments where the 3D bar charts are projected onto 2D surfaces. While tactile charts exist to help people with vision impairments [@goncu2008; @engel2017; @watanabe2018], their designs are vastly different than the typical 3D bar charts. As of now, research involving direct translations of 3D bar charts in the physical world do not exist.
+All of the aforementioned studies have one key limitation: they are conducted in environments where the 3D bar charts are projected onto 2D surfaces. While tactile charts exist to help people with vision impairments [@goncu2008; @engel2017; @watanabe2018], their designs are vastly different than the typical 3D bar charts (I don't think that it would be worth going into tactile charts, at least at in this section). As of now, research involving direct translations of 3D bar charts in the physical world do not exist.
 
 # Heat Maps in Research and Practice
 
@@ -160,6 +170,7 @@ The work of @cleveland1984 asked participants two questions when making comparis
 ```{r}
 #| label: "Ratios used by several studies"
 #| layout-ncol: 2
+
 # Graph showing the ratios used by C&M
 library(tidyverse)
 cm.ratio <- (c(17.8, 26.1, 38.3, 46.4, 56.2, 68.1, 82.5)/100)
