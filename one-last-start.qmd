@@ -97,7 +97,9 @@ Of course, there are other less-studied factors that could affect perceptual jud
 
 ### Response Times
 
-The speed in making perceptual judgments is another common metric in studies comparing types of charts.
+The speed in making perceptual judgments is another common metric in studies comparing types of charts. In theory, charts where questions can be answered more quickly implies that the chart is better at communicating information. However, response time is a poor metric in situations of exploratory data analysis and long term interactions with complex graphics [@vanderplas2020].
+
+Depth cues from 3D bar charts tend to increase the amount of time required to answer questions [@siegrist1996; @fischer2000; @stewart2009].
 
 -   @stewart2009
 -   @siegrist1996
