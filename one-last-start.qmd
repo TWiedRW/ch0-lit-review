@@ -130,7 +130,7 @@ The seminal work of @cleveland1984 theorized that encoding information in volume
 
 From an artistic point of view, depth cues can obscure some elements of the chart, resulting in a decrease in readability. For 3D bar charts, this often occurs from the volumetric elements partially covering the response axis. Consider @fig-skewed where the y-axis corresponds to the back face of the rectangular prism. In this case, the front and right faces do not directly correspond with the axis, thus making it more difficult to extract values from the chart.
 
-![Figure in Statistical Graphics: Design Principles and Practices. The viewing angle for this chart would have viewers overestimate the values of the bars](images/skewed-angle.jpg){fig-skewed width="3.35in"}
+![Figure in Statistical Graphics: Design Principles and Practices. The viewing angle for this chart would have viewers overestimate the values of the bars](images/skewed-angle.jpg){#fig-skewed width="3.35in"}
 
 
 ### For 3D Bar Charts
