@@ -41,41 +41,37 @@ ggplot(penguins, mapping = aes(x = bill_length_mm,
   geom_point()
 ```
 
-
 While there have been many attempts to establish good data visualization practices [@tufte2001; @vanderplas2020], we do not know how well these recommendations translate from 2D projections into our 3D world. The advent of 3D printing allows us to precisely construct the 3D charts that have widely been studied through their 2D representations [@croxton1932; @barfield1989; @zacks1998]. With limited research on 3D-printed data manifestations, we explore the initial empirical findings of true 3D statistical graphics.
 
 ## Overview of Physical 3D Visualizations
 
-Data can be expressed in the physical world through a wide variety of means. In many cases, this can take on artistic expressions, such as encoding information into crocheted blankets or wooden sculptures [@huronMakingDataPhysical2023]. While certainly providing information about the data, these informational art pieces are largely left as display items to promote conversation into the underlying dataset. 
+Data can be expressed in the physical world through a wide variety of means. In many cases, this can take on artistic expressions, such as encoding information into crocheted blankets or wooden sculptures [@huronMakingDataPhysical2023]. While certainly providing information about the data, these informational art pieces are largely left as display items to promote conversation into the underlying dataset.
 
 ![3D-printed treemap created displaying Gross National Income (GNI) for 130 countries [@huronMakingDataPhysical2023, pg. 217]. The two 3D prints on the bottom have additional information overlaid on top of the treemap as 2D displays.](images/treemap-3d.png)
 
-Perhaps one of the most affordable types of data physicalization is through the use of 3D printing. Aside from the startup cost of a 3D-printer, material and labor costs are relatively low. Rolls of PLA filament can be acquired for under \$20 and can be used to create multiple charts. Print times vary depending on the size and complexity of the graphic, but smaller charts can be produced in approximately 2 hours. While needing much more time to produce than computer-generated visualizations, the amount of hands-on labor during the 3D-printing process is minimal. 
+Perhaps one of the most affordable types of data physicalization is through the use of 3D printing. Aside from the startup cost of a 3D-printer, material and labor costs are relatively low. Rolls of PLA filament can be acquired for under \$20 and can be used to create multiple charts. Print times vary depending on the size and complexity of the graphic, but smaller charts can be produced in approximately 2 hours. While needing much more time to produce than computer-generated visualizations, the amount of hands-on labor during the 3D-printing process is minimal.
 
-One of the earliest 3D-printed charts was shared in 2014 by the Wall Street Journal, where the print was used to discuss the rising popularity of 3D printers [XXX; @thingiversecomChartSales3D]. Since then, using 3D printers to create statistical graphics has typically been reserved for niche purposes. It is rare to find these types of charts in practice, where images of the charts are often posted to social media or blog posts. This results in limited access to the physical charts, even though source print files can be shared through sites such as [thingiverse.com](thingiverse.com) and [printables.com](printables.com). 
+One of the earliest 3D-printed charts was shared in 2014 by the Wall Street Journal, where the print was used to discuss the rising popularity of 3D printers [@graphicsHowDoes3D; @thingiversecomChartSales3D]. Since then, using 3D printers to create statistical graphics has typically been reserved for niche purposes. It is rare to find these types of charts in practice, where images of the charts are often posted to social media or blog posts. This results in limited access to the physical charts, even though source print files can be shared through sites such as [thingiverse.com](thingiverse.com) and [printables.com](printables.com).
 
-:::{#fig-wsj layout-nrow=2}
+::: {#fig-wsj layout-nrow="2"}
+![Original 3D printed chart from WSJ](images/wsj-print.jpg){#fig-wsj-orig fig-height="2in"}
 
-![Original 3D printed chart from WSJ](images/wsj-print.jpg){#fig-wsj-orig fig-height=2in}
+![Replicated print created in 2025](images/wsj-myprint.jpg){#fig-wsj-myprint fig-height="2in"}
 
-![Replicated print created in 2025](images/wsj-myprint.jpg){#fig-wsj-myprint fig-height=2in}
-
-3D-printed volume charts showing the sales of 3D printers under \$5,000 [@thingiversecomChartSales3D]. @fig-wsj-orig shows the original WSJ print from 2014. @fig-wsj-myprint shows two prints created with a Flash Forge Finder 3D Printer, where the smaller chart took 2 hours to print and the larger chart took 6 hours to print. 
+3D-printed volume charts showing the sales of 3D printers under \$5,000 [@thingiversecomChartSales3D]. @fig-wsj-orig shows the original WSJ print from 2014. @fig-wsj-myprint shows two prints created with a Flash Forge Finder 3D Printer, where the smaller chart took 2 hours to print and the larger chart took 6 hours to print.
 :::
-
-
 
 ### Creating 3D-Printed Visualizations
 
-The popularity of the 3D printer exploded in the early 2010's as the technology became increasingly available and cheaper. This has led to increased use of 3D printing in many focus areas, including healthcare [@dodziuk2016] and engineering [@v2023], but has only seen novel use cases for statistical graphics. Many software programs have the ability to create 3D statistical graphics, but lack the ability to easily export the graphics into files suitable for 3D printing. 
+The popularity of the 3D printer exploded in the early 2010's as the technology became increasingly available and cheaper. This has led to increased use of 3D printing in many focus areas, including healthcare [@dodziuk2016] and engineering [@v2023], but has only seen novel use cases for statistical graphics. Many software programs have the ability to create 3D statistical graphics, but lack the ability to easily export the graphics into files suitable for 3D printing.
 
 Numerous software programs can create digital renderings of 3D charts. Excel [@msexcel] has native support for creating charts with 3D depth cues, but requires add-ins to produce charts using 3 axes. R (XXX) has several options for creating 3D charts that have data on 3 axes [e.g., @rgl; @rayshader; @plotly], but lacks support for creating depth charts. SAS 9.4 (XXX) has options such as PROC GCHART for adding depth cues and PROC G3D for surface charts. Other popular software programs contain similar capabilities, such as JavaScript libraries, MATLAB, and Python.
 
-While a number of tools exist for creating 3D data visualizations, the pipeline of getting these charts into files compatible with 3D printing is not widely automated. For example, R has some options using the `rgl` [@rgl] and `rayshader` [@rayshader] packages, but both packages have limited tuning parameters for the resulting output files. Another option is to use 3D software, such as OpenSCAD [@kintelOpenSCADDocumentation2023], to manually create the charts, but these software programs lack the ability to directly integrate statistical information in the formulation of the charts. 
+While a number of tools exist for creating 3D data visualizations, the pipeline of getting these charts into files compatible with 3D printing is not widely automated. For example, R has some options using the `rgl` [@rgl] and `rayshader` [@rayshader] packages, but both packages have limited tuning parameters for the resulting output files. Another option is to use 3D software, such as OpenSCAD [@kintelOpenSCADDocumentation2023], to manually create the charts, but these software programs lack the ability to directly integrate statistical information in the formulation of the charts.
 
-Another consideration for 3D-printed charts is the inclusion of text labels. <!-- Sentence about how text labels are helpful with citation -->
-With single-filament 3D printers, text can be incorporated in three primary ways: (1) embossing, in which the text is raised above the surface of the print; (2) engraving, in which the text is recessed into the surface; or (3) applying external labels, such as stickers or ink. Multi-filament 3D printers have the additional option to use a different color to make text labels flush with their surfaces. However, @munzner cautioned that the text of 3D charts will suffer from legibility issues due to the distortion of the text when viewed at an angle. 
+Another consideration for 3D-printed charts is the inclusion of text labels. <!-- Sentence about how text labels are helpful with citation --> With single-filament 3D printers, text can be incorporated in three primary ways: (1) embossing, in which the text is raised above the surface of the print; (2) engraving, in which the text is recessed into the surface; or (3) applying external labels, such as stickers or ink. Multi-filament 3D printers have the additional option to use a different color to make text labels flush with their surfaces. However, @munzner cautioned that the text of 3D charts will suffer from legibility issues due to the distortion of the text when viewed at an angle.
 
+```{=html}
 <!-- This subsection was basically redid at the beginning of the section
 
 ### Current use cases
@@ -85,6 +81,7 @@ The use of 3D-printed data visualizations for statistical graphics is largely a 
 
 FIGURE PLACEHOLDER: show some examples of 3D printed charts
 -->
+```
 
 ```{=html}
 <!-- ![Example bar chart from White Clouds](https://www.whiteclouds.com/wp-content/uploads/2021/09/data-visualization-physical-bar-chart-large.jpg) 
@@ -100,14 +97,15 @@ NOVEL GRAPHICS CASES
 -->
 ```
 
+
+
 ## Bar Charts in Research and Practice
 
 One of the most common types of charts is the bar chart, characterized by the use of rectangular geometries in a 2D space. Two variables are mapped to the geometries of the bar chart, where one axis is dedicated to a categorical variable of nominal or ordinal nature, and the other axis is for a continuous variable to denote magnitude or a response. These charts have been used over 200 years and remain a popular choice for many modern data visualizations [@friendly2021].
 
-The use of 3-dimensional elements in bar charts typically involve converting the rectangular bars into rectangular prisms. @fig-make-bar-3d shows an illustration of this transformation. 
+The use of 3-dimensional elements in bar charts typically involve converting the rectangular bars into rectangular prisms. @fig-make-bar-3d shows an illustration of this transformation.
 
-:::{#fig-make-bar-3d layout-ncol=4}
-
+::: {#fig-make-bar-3d layout-ncol="4"}
 ![2D bar](images/make-bar-3d-1.png){#fig-bar3d-1}
 
 ![Opposite face](images/make-bar-3d-2.png){#fig-bar3d-2}
@@ -121,17 +119,15 @@ Construction of depth cues for a 2D bar chart. First, the amount of depth is set
 
 The naming convention for these types of bar charts is not consistent. Many researchers in the visualization community call these 3D bar charts due to the portrayal of three-dimensional space [e.g., @zacks1998; @fischer2000]. Other times, the lack of information in the third dimension results in the charts referred to as 2.5D charts [e.g., @tractinsky1999]. To keep a consistent nomenclature, they will be called "3D bar charts" throughout this dissertation.
 
-
 ### Against 3D Bar Charts
 
 @tufte2001 called the use of 3D elements a "fake perspective" in his description of "chart junk", which is where visual elements add clutter to the data visualization. Other researchers [@zacks1998; @stewart2009] have termed the perspective effect "extraneous" when referring to depth cues. The reasoning behind this is fairly intuitive: why include additional noise when simpler alternatives exist?
 
-The seminal work of @cleveland1984 theorized that encoding information in volumes would provide worse numerical estimation than for encodings using positions, lengths, and areas. Their reasoning stems from Steven's Power Law (XXX), a psychophysics formulation that estimates a perceived stimuli magnitude $p$ with the actual magnitude $a$ by $p=ka^\alpha$ . The estimation of $\alpha$ provides guidance to what types of stimuli are subject to the most distortion to their true scale when $\alpha=1$. <!--(alpha for volume estimated to be X, area is Y, and length is Z).--> While the 3D bar charts do not lose their 2D encodings, they do gain depth, and thus volume encodings. The effect of volume versus area comparisons was noted earlier by @croxton1932, where accuracy for ratio estimations was worse for cubes as compared to bars and circles. 
+The seminal work of @cleveland1984 theorized that encoding information in volumes would provide worse numerical estimation than for encodings using positions, lengths, and areas. Their reasoning stems from Steven's Power Law (XXX), a psychophysics formulation that estimates a perceived stimuli magnitude $p$ with the actual magnitude $a$ by $p=ka^\alpha$ . The estimation of $\alpha$ provides guidance to what types of stimuli are subject to the most distortion to their true scale when $\alpha=1$. <!--(alpha for volume estimated to be X, area is Y, and length is Z).--> While the 3D bar charts do not lose their 2D encodings, they do gain depth, and thus volume encodings. The effect of volume versus area comparisons was noted earlier by @croxton1932, where accuracy for ratio estimations was worse for cubes as compared to bars and circles.
 
 From an artistic point of view, depth cues can obscure some elements of the chart, resulting in a decrease in readability. For 3D bar charts, this often occurs from the volumetric elements partially covering the response axis. Consider @fig-skewed where the y-axis corresponds to the back face of the rectangular prism. In this case, the front and right faces do not directly correspond with the axis, thus making it more difficult to extract values from the chart.
 
 ![Figure in Statistical Graphics: Design Principles and Practices. The viewing angle for this chart would have viewers overestimate the values of the bars](images/skewed-angle.jpg){#fig-skewed width="3.35in"}
-
 
 ### For 3D Bar Charts
 
@@ -143,11 +139,13 @@ The persistence of 3D bar charts reflects the influence of artistic preferences 
 
 ### Conflicting Empirical Studies
 
+```{=html}
 <!---
 -   All the new articles from <https://measuringu.com/is-3d-worse-than-2d/>
 -   @melodycarswell1991, should include this one!
 -   @spence1990
 --->
+```
 
 Although @tufte2001 argued against the use of 3D charts when possible, empirical studies involving direct comparisons of 2D and 3D bar charts have shown mixed results. In general, these studies focus on metrics of accuracy and find that 3D bar charts tend to be either less accurate or just as accurate as their 2D counterparts. Another common metric is response time, where 3D charts tend to have longer response times. Overall preference for one style of chart over another is a subjective measurement, but has shown mixed results for the two styles of charts.
 
@@ -158,7 +156,6 @@ Accuracy is a common metric in studies comparing 2D and 3D bar charts, typically
 When only measuring accuracy, 3D bar charts tend to be less accurate than their 2D counterparts [@zacks1998; @stewart2009]. However, this result is less prominent when introducing time delays [@zacks1998, Experiment 2] or easier task complexity [@stewart2009]. @siegrist1996 noted that bar positions and sizes also affected performance accuracy, emphasizing that other factors contribute to accuracy. It is also important to note that metrics of accuracy are not conclusive, where sometimes there is no evidence of a difference between 2D and 3D bar charts [@melodycarswell1991].
 
 Of course, there are other less-studied factors that could affect perceptual judgments of accuracy in 3D bar charts. In addition to viewing parameters found in 2D bar chart studies [@fischer2005; @rice2024], adding depth cues are also subject to viewing angles, amount of depth, and field of view parameters. Viewing angle, with respect to the axis, can mislead the reader into overestimating or underestimating numerical quantities [@fig-skewed]. @zacks1998 did not find a significant effect for the amount of perception depth, but noted a trend such that increased exaggeration of depth lowered their accuracy metric. Lastly, field of view is fixed for the viewer, but can widely distort 3D renderings [@fig-fov]. These factors add additional complexity, but are not widely studied for the use of statistical graphics.
-
 
 ::: {#fig-fov layout-ncol="3"}
 ![FOV: 30 degrees](images/fov-30.png){#fig-fov30}
@@ -182,18 +179,30 @@ Depth cues from 3D bar charts tend to increase the amount of time required to an
 
 #### Preference
 
-The debate between whether to use 2D or 3D graphics stems from a wider adoption of 3D charts in practice. Computer graphics have made it easy to produce charts of either dimensionality, resulting in creative liberties for the creation of the chart for publication. Figures X and X showcase two examples of 3D bar charts from the 1978 Handbook of Agricultural Charts (XXX) where other options exist for displaying the data. @schmid1983 (Ch. 8) also showcases many other 3D charts published in official reports.
+The debate between whether to use 2D or 3D graphics stems from a wider adoption of 3D charts in practice. Computer graphics have made it easy to produce charts of either dimensionality, resulting in creative liberties for the creation of the chart for publication. @fig-ag-bar showcases two examples of 3D bar charts from the 1978 Handbook of Agricultural Charts [@cdi_hathitrust_hathifiles_uva_x030492864] where other options exist for displaying the data. @schmid1983 (Ch. 8) also showcases many other 3D charts published in official reports.
 
-![Located from 1978 HANDBOOK OF AGRICULTURAL CHARTS](images/preferance-example1.png){width="3.08in"}
 
-![](images/preferance-example2.png)
+:::{#fig-ag-bar layout-ncol=2}
 
-Preference can be broken down into two broad categories: (1) visual appeal, and (2) usefulness. Visual appeal is where perceptual tasks are not a priority, and the goal is to have an image that is pleasant to the viewer. Usefulness, on the other hand, is a rating of how effective the viewer thought the chart was in order to answer the question. Both are subjective measures
+![Bar chart with strictly positive values](images/preferance-example1.png){#fig-ag-bar-pos fig-height="3in"}
+
+![Bar chart with negative values](images/preferance-example2.png){#fig-ag-bar-neg fig-height="2in"}
+
+Two examples of 3D bar charts found in publication [@cdi_hathitrust_hathifiles_uva_x030492864]. This left image is a stacked bar chart, using shadings to indicate sugarbeats and sugarcane. The image on the right 
+:::
+
+Preference can be broken down into two broad categories: (1) visual appeal, and (2) usefulness. Visual appeal is where perceptual tasks are not a priority, and the goal is to have an image that is pleasant to the viewer. Usefulness, on the other hand, is a rating of how effective the viewer thought the chart was in order to answer the question. Both are subjective measures that influence the choice 
 
 When not tasked with estimating values, 3D bar charts tend to be more visually appealing [@levy1996; @fisher1997; @stewart2009]. This may be in part due to the forced illusion of depth which creates additional embellishments that would increase the impression and memorability of the chart, as seen by other types of Tufte's "chart junk" [@borgo2012; @peña2020]. Despite the visual appeal, 2D charts tend to be chosen for preference and ease of use when making numerical estimations [@levy1996; @stewart2009].
 
 ```{r}
 #| eval: true
+#| layout-ncol: 3
+#| fig-cap: "Three examples of chart preferences. "
+#| fig-subcap: 
+#|  - "3D volume chart"
+#|  - "2D area chart"
+#|  - "Much better alternative"
 
 # Use Tufte's worst chart, 2D equivalent, and an actually good representation.
 year <- 1972:1976
@@ -204,6 +213,8 @@ under25plot <- 100 - (middle + over25)
 label <- factor(c('25 AND OVER', 'middle', 'UNDER 25'), levels = c('25 AND OVER', 'middle', 'UNDER 25'), ordered = T)
 response <- c(over25, middle, under25plot)
 
+knitr::include_graphics("images/tufte-bad-graph.png")
+
 data.frame(year = rep(year, times = 3), label = rep(label, each = 5), response) %>% 
   # mutate(label = factor(label, levels = c('25 AND OVER', 'middle', 'UNDER 25'), ordered = T)) %>% 
 ggplot(mapping = aes(x = year, y = response)) + 
@@ -212,7 +223,7 @@ ggplot(mapping = aes(x = year, y = response)) +
             outline.type = 'full') + 
   scale_fill_manual(values = c('25 AND OVER' = 'grey20',
                                'middle' = NULL,
-                               'UNDER 25' = 'grey90'),
+                               'UNDER 25' = 'grey80'),
                     na.value = 'white') + 
   annotate("label", x = year, y = over25-2, label = over25, size = 3) + 
   annotate("label", x = year, y = under25+2, label = under25, size = 3) + 
@@ -220,6 +231,21 @@ ggplot(mapping = aes(x = year, y = response)) +
   theme_bw() +
   theme(panel.grid = element_blank(),
         aspect.ratio = 2)
+
+data.frame(year = rep(year, times = 2), response = c(under25, over25), 
+  label = c(rep('UNDER 25', 5), rep('25 AND OVER', 5))) %>% 
+ggplot(mapping = aes(x = year, y = response, color = label)) + 
+  #geom_bar(stat = 'identity', position = position_stack()) + 
+  geom_line(size = 2) + 
+  geom_point(size = 4) + 
+  scale_y_continuous(expand = c(0,0), limits = c(0,100)) + 
+  labs(x = 'Year', y = 'Percent Enrollment', color = '') + 
+  scale_color_manual(values = c('25 AND OVER' = 'grey20',
+                               'UNDER 25' = 'grey80'),
+                    na.value = 'white') + 
+  theme_bw() +
+  theme(panel.grid = element_blank(),
+        aspect.ratio = 1)
 ```
 
 ```{=html}
@@ -236,10 +262,9 @@ ggplot(mapping = aes(x = year, y = response)) +
 -   Experiment 5: Same as 3,4, but included new plot type that made bars by overlapping all volume faces -->
 ```
 
-
 ## Heat Maps in Research and Practice
 
-When creating charts for three or more variables, it becomes increasingly complex to visualize data [@grinstein2001]. One option is to map the additional variables using gestalt principles [@vanderplas2020] (Original citation?), which includes making use of color, size, and/or shapes to denote information. However, not every aesthetic is compatible with every type of variable. Color can be used to map either continuous variables with gradient scales or categorical variables with palettes. Size is typically reserved for continuous variables, where larger values correspond to a larger quantity. Shapes tend to have finite distinguishable representations in order to represent categorical variables. Examples of good and poor cases for each of these aesthetics is presented in Figure @fig-gestalt.
+When creating charts for three or more variables, it becomes increasingly complex to visualize data [@grinstein2001]. One option is to map the additional variables to aesthetics using gestalt principles [@vanderplas2020] (Original citation?), which includes making use of color, size, and/or shapes to denote information. However, not every aesthetic is compatible with every type of variable. Color can be used to map either continuous variables with gradient scales or categorical variables with palettes. Size is typically reserved for continuous variables, where larger values correspond to a larger quantity. Shapes tend to have finite distinguishable representations in order to represent categorical variables. Examples of good and poor cases for each of these aesthetics is presented in @fig-gestalt.
 
 ```{r}
 #| label: fig-gestalt
@@ -288,7 +313,7 @@ penguins %>%
   theme(aspect.ratio = 1) 
 ```
 
-Heat maps are a type of chart that can be used with two variables of any type and a continuous response variable. In two-dimensional formats, color is often used to denote the magnitude of the response, utilizing a gradient scale. When represented in three dimensions, height is the primary mapping of the response of the heat map. Due to the height aesthetic, 3D heat maps are sometimes referred to as "height maps", particularly when spatial coordinates are involved. Since the color height of the response variable can only be mapped once to each combination of x and y coordinates, heat maps are generally used on the summary of responses, such as averages or single observations.
+Heat maps are a type of chart that can be used with two variables of any type and a continuous response variable. In two-dimensional formats, fill colors are often used to denote the magnitude of the responses, utilizing a gradient scale. When represented in three dimensions, height is the primary mapping of the response of the heat map. Due to the height aesthetic, 3D heat maps are sometimes referred to as "height maps", particularly when spatial coordinates are involved. Since the color height of the response variable can only be mapped once to each combination of x and y coordinates, heat maps are generally used on the summary of responses, such as averages or single observations. This makes heat maps especially useful for visualizing patterns and trends across large datasets in a compact and interpretable format.
 
 ```{r}
 #| label: fig-heatmap2d
@@ -322,9 +347,12 @@ expand_grid(status = factor(c('High', 'Middle', 'Low'), ordered = T, levels = c(
 knitr::include_graphics('images/heatmap3d.png')
 ```
 
+
+
 ### Empirical Studies of 2D and 3D Heat Maps
 
-Unlike 2D and 3D bar charts, the comparison of dimensionality for heat maps has not been widely studied. This may in part be due to the complex nature of color scales [@breslow2009; @liu2018; @reda2019]. While bar charts simply add a perspective depth cue to increase the dimensionality, the translation of color to height results in numerous considerations, such as the scaling of the height [@fig-color-height]. 
+Unlike 2D and 3D bar charts, the dimensional comparison for heat maps has not been widely studied. This may be attributed to the complex nature of color scales having an influential role in the perception of heat maps 2D  [@breslow2009; @liu2018; @reda2019]. Heat maps require a translation of color into height values, a process where designed studies would require multiple considerations. The first consideration is the color palette to use in 2D charts. The next is the physical scaling of color to height. Lastly, the choice to use either solid-colored heights on the 3D charts or to carry over the color scheme from the 2D charts. 
+
 
 ::: {#fig-color-height layout-ncol="2"}
 ![Flatter height scale](images/height-color-0.3.png){#fig-flat3d}
@@ -336,10 +364,61 @@ Two figures representing the volcano dataset [@volcano] using different height s
 
 In 2D heat maps, the choice of color palettes can influence the perception of numerical estimations [@liuSomewhereRainbowEmpirical2018; @molinalopezEffectColorPalettes2023; @zhangJustNoticeableDifference2023a]. Some color palettes are easier to extract information from than other. An additional consideration is the use of colorblind-friendly palettes for people with color deficiencies. This relationship between color and 2D heat maps contributes to the difficulties with direct translations to 3D heat maps.
 
+```{r}
+#| layout-ncol: 4
+#| label: fig-colorblind
+#| fig-cap: "Effect of color deficiencies on the inferno palette from @viridis."
+#| fig-subcap:
+#| - "Original palette"
+#| - "Deutan (red-green)"
+#| - "Protan (red-green)"
+#| - "Tritan (blue-yellow)"
 
-FIGURE PLACEHOLDER: COLOR PALETTES WITH COLORBLIND FILTERS
+
+library(colorspace)
+n <- 7
+ref.pal <- viridis::inferno(n)
+
+ggplot(mapping = aes(y = 1:n, x = 1, fill = ref.pal)) + 
+  geom_tile() + 
+  scale_fill_identity() + 
+  theme_void() +
+  theme(aspect.ratio = n, legend.position = 'none')
+
+ggplot(mapping = aes(y = 1:n, x = 1, fill = deutan(ref.pal))) + 
+  geom_tile() + 
+  scale_fill_identity() + 
+  theme_void() +
+  theme(aspect.ratio = n, legend.position = 'none')
+
+ggplot(mapping = aes(y = 1:n, x = 1, fill = protan(ref.pal))) + 
+  geom_tile() + 
+  scale_fill_identity() + 
+  theme_void() +
+  theme(aspect.ratio = n, legend.position = 'none')
+
+ggplot(mapping = aes(y = 1:n, x = 1, fill = tritan(ref.pal))) + 
+  geom_tile() + 
+  scale_fill_identity() + 
+  theme_void() +
+  theme(aspect.ratio = n, legend.position = 'none')
+
+```
+
 
 Only a few studies have directly compared the dimensionality of statistical graphics [@kraus2020; @jeong2025]. Conducted primarily in virtual reality, these studies suggest that 2D and 3D charts each offer advantages depending on the task. Two-dimensional charts generally produced higher interpretation accuracy and better recognition of overall distributional patterns. In contrast, three-dimensional charts were more effective for estimating single values and supporting long-term recall. Taken together, these findings highlight dimensionality as an important consideration when selecting visual displays for specific analytic goals.
+
+
+## State of Data Physicalization in 3D Statistical Graphics
+
+WORK IN PROGRESS
+
+Key ideas
+
+- A few studies have used physical 3D charts
+- Not always for statistical graphics, but there are related works
+
+
 
 
 ## Methods for Evaluating Visualization Effectiveness
@@ -348,12 +427,11 @@ Only a few studies have directly compared the dimensionality of statistical grap
 
 @vanderplas2020 discussed various approaches to testing graphics, including numerical estimations, speed, and error rates. These metrics are fairly common metrics when comparing 2D and 3D charts [@croxton1932; @cleveland1984; @hughes], but do not represent the full picture of what makes a one type of chart better than another. As seen by @levy1996, the objectives of the chart can determine which type of chart should be used. While many metrics exist, the practical limitation of testing generally allows for only a few metrics to be tested at a given time.
 
-Many studies involving statistical graphics tend to rely on numerical estimations for recommending data visualization practices. This is particular useful given the role that data visualizations play in the understanding of underlying datasets [@tukey1965]. 
-
+Many studies involving statistical graphics tend to rely on numerical estimations for recommending data visualization practices. This is particular useful given the role that data visualizations play in the understanding of underlying datasets [@tukey1965].
 
 ### Designing studies for numerical estimations
 
-Over 2,500 citations have referenced the work of @cleveland1984 when discussing properties of statistical graphics. Since then, the methods of analyzing and conducting studies on statistical graphics have evolved [e.g., @vanderplas2020; @hofmann2012], but the structure of experimental designs involving numerical estimations tends to remain similar. Tasks typically involve the comparison of two stimuli, where the question is "how much bigger/smaller is one value compared to the other?" Care needs to be taken in the phrasing of this question since mental subtractive processes are perceived differently from mental ratio processes [@veit; @hagerty1978]. 
+Over 2,500 citations have referenced the work of @cleveland1984 when discussing properties of statistical graphics. Since then, the methods of analyzing and conducting studies on statistical graphics have evolved [e.g., @vanderplas2020; @hofmann2012], but the structure of experimental designs involving numerical estimations tends to remain similar. Tasks typically involve the comparison of two stimuli, where the question is "how much bigger/smaller is one value compared to the other?" Care needs to be taken in the phrasing of this question since mental subtractive processes are perceived differently from mental ratio processes [@veit; @hagerty1978].
 
 @cleveland1984 asked participants two questions when making comparisons between two values on a chart: (1) which of the two values was the smaller, and (2) what percentage the smaller was of the larger. The first question clarified if the participants were looking at the values correctly for the second question, and the second question is an estimation of $A/B$, where $A<B$. Accuracy was measured by $\log_2(|\text{True value}-\text{Estimated value}|+1/8)$, using the trimmed averages when bootstrapping confidence intervals. Cleveland and McGill's experiment was replicated by @heer2010, showing similar results for the experiment's procedure in a crowdsourced environment.
 
@@ -367,18 +445,15 @@ When designing studies for numerical estimation, the choice of $A/B$ and the mea
 
 Psychophysics has shown that different estimation tasks affect how participants respond to numerical estimations. Estimations of ratios tend to fall on an exponential scale, where larger differences in stimuli result in smaller differences of estimated ratios. This makes $\log|\text{Error}|$ a natural choice for measuring ratio estimation tasks, similar to how @cleveland1984 measured error. Measurements of differences tend to be estimated linearly, where estimated differences are the same regardless of differences in stimuli. As long as the estimation task is consistent for each trial, statistical methodology can handle the differences in estimation tasks.
 
-
-
-
 ```{r}
 #| label: fig-ratios
 #| fig-cap: "Ratios used by several studies"
 #| layout-ncol: 2
 #| fig-subcap:
-#| - "C&M"
-#| - "Croxton"
-#| - "Zacks 1"
-#| - "Zacks 3"
+#| - "@cleveland1984"
+#| - "@croxton1932"
+#| - "@zacks1998, Experiment 1"
+#| - "@zacks1998, Experiment 3"
 
 # Graph showing the ratios used by C&M
 library(tidyverse)
@@ -392,24 +467,40 @@ mycol <- "#d00000"
 ggplot(mapping = aes(x = 1:length(cm.ratio), y = cm.ratio)) + 
   geom_col(fill = mycol, color = 'black') + 
   geom_text(aes(label = cm.ratio, y = cm.ratio + 0.05)) + 
-  labs(title = "C&M 1984") + 
-  theme(aspect.ratio = 1/2)
+  scale_y_continuous(limits = c(0,1)) + 
+  theme_bw() + 
+  theme(aspect.ratio = 1/2,
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank())
 
 ggplot(mapping = aes(x = 1:length(croxton1932.ratio), y = croxton1932.ratio)) + 
   geom_col(fill = mycol, color = 'black') + 
+  scale_y_continuous(limits = c(0,100)) + 
   geom_text(aes(label = croxton1932.ratio, y = croxton1932.ratio + 0.05)) + 
-  labs(title = "Croxton 1932") + 
-  theme(aspect.ratio = 1/2)
+  scale_y_continuous(limits = c(0,1)) + 
+  theme_bw() + 
+  theme(aspect.ratio = 1/2,
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank())
 
 ggplot(mapping = aes(x = 1:length(zacks1), y = zacks1)) + 
   geom_col(fill = mycol, color = 'black') + 
   geom_text(aes(label = zacks1, y = zacks1 + 0.05)) + 
-  labs(title = "Zacks Experiment 1") + 
-  theme(aspect.ratio = 1/2)
+  scale_y_continuous(limits = c(0,1)) + 
+  theme_bw() + 
+  theme(aspect.ratio = 1/2,
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank())
 
 ggplot(mapping = aes(x = 1:length(zacks3), y = zacks3)) + 
   geom_col(fill = mycol, color = 'black') + 
   geom_text(aes(label = zacks3, y = zacks3 + 0.05)) + 
-  labs(title = "Zacks Experiment 3") + 
-  theme(aspect.ratio = 1/2)
+  scale_y_continuous(limits = c(0,100)) + 
+  scale_y_continuous(limits = c(0,1)) + 
+  theme_bw() + 
+  theme(aspect.ratio = 1/2,
+    panel.grid.major.x = element_blank(),
+    panel.grid.minor.x = element_blank())
 ```
+
+
