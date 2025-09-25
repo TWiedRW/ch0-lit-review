@@ -108,7 +108,7 @@ The use of 3-dimensional elements in bar charts typically involve converting the
 
 :::{#fig-make-bar-3d layout-ncol=4}
 
-![Rectangular geometry](images/make-bar-3d-1.png){#fig-bar3d-1}
+![2D bar](images/make-bar-3d-1.png){#fig-bar3d-1}
 
 ![Opposite face](images/make-bar-3d-2.png){#fig-bar3d-2}
 
