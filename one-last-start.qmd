@@ -199,6 +199,7 @@ When not tasked with estimating values, 3D bar charts tend to be more visually a
 #| eval: true
 #| layout-ncol: 3
 #| fig-cap: "Three examples of chart preferences. "
+#| fig-show: 'hold'
 #| fig-subcap: 
 #|  - "3D volume chart"
 #|  - "2D area chart"
@@ -422,6 +423,8 @@ Key ideas
 
 
 ## Methods for Evaluating Visualization Effectiveness
+
+
 
 ### What makes a good chart?
 
