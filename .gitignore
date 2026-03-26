@@ -4,3 +4,5 @@
 .Ruserdata
 examples/
 graveyard/
+.gitignore
+Notes/
