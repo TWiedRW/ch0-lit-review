@@ -1,0 +1,2 @@
+## Notice
+This document was fully moved into [github.com/TWiedRW/dissertation>](github.com/TWiedRW/dissertation>) under `index.qmd`. This is because Quarto books require an `index.qmd` file, and it will be the first page. This repository will no longer be updated as of 4/7/2026.
